@@ -33,14 +33,14 @@ Automatically shown in inline mode.
             //update value of datepicker
             this.$input.keyup($.proxy(function(){
                this.$tpl.removeData('date');
-               this.$tpl.bdatepicker('update');
+               this.$tpl.bdatepicker(this.options.datepicker);
             }, this));
 
         },
 
        value2input: function(value) {
            this.$input.val(value ? this.dpg.formatDate(value, this.parsedViewFormat, this.options.datepicker.language) : '');
-           this.$tpl.bdatepicker('update');
+           this.$tpl.bdatepicker(this.options.datepicker);
        },
 
        input2value: function() {
